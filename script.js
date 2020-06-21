@@ -49,7 +49,7 @@ mdToBB.list = function (body, ordered) {
     closeTag += '\n';
   }
 
-  if ($("#addNewLineEndList".checked)) {
+  if ($("#addNewLineEndList").checked) {
     closeTag += '\n';
   }
 
