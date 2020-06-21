@@ -12,10 +12,14 @@ function removeLeadingWhitespace(text) {
 
 var mdToBB = new marked.Renderer();
 
-mdToBB.code = function (text, infostring) {
+mdToBB.code = function (text, lang) {
   // to do: add option for php using infostring
   if (document.getElementById('useCodeTag').checked) {
-    return '[code]' + text.trim() + '[/code]\n\n';
+    // if this code is using any language, format with php always
+    if (lang)
+      return '[php]' + text.trim() + '[/php]\n\n';
+    else
+      return '[code]' + text.trim() + '[/code]\n\n';    
   } else {
     return '[size=4][font=Courier New]' + text + '[/font][/size]\n';
   }
