@@ -209,6 +209,7 @@ function onClick_Style4() {
   $("#formatCodeSpan").checked = false;
   $("#addNewLineEndList").checked = false;
   $("#addNewLine").checked = false;
+  supportsPhpTag = false;
   changeYouTubeTag = false;
 }
 
