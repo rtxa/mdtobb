@@ -16,7 +16,7 @@ mdToBB.code = function (text, lang) {
   // to do: add option for php using infostring
   if (document.getElementById('useCodeTag').checked) {
     // if this code is using any language, format with php always
-    if (lang)
+    if (lang && supportsPhpTag)
       return '[php]' + text.trim() + '[/php]\n\n';
     else
       return '[code]' + text.trim() + '[/code]\n\n';    
@@ -124,6 +124,7 @@ var tagStrikeStart = "[s]";
 var tagStrikeEnd = "[/s]";
 var tagOListStart = "[list=1]";
 var tagOListEnd = "[/list]";
+var supportsPhpTag = true;
 
 function convert() {
   markdownConverter.convert(document.getElementById('markdownTextarea'), document.getElementById('bbcodeTextarea'));
@@ -155,6 +156,7 @@ function defaultStyle() {
   tagStrikeEnd = "[/s]";
   tagOListStart = "[list=1]";
   tagOListEnd = "[/list]";
+  supportsPhpTag = true;
 }
 
 // VBulletin
@@ -181,6 +183,7 @@ function onClick_Style2() {
   $("#addNewLineEndList").checked = true;
   $("#addNewLine").checked = true;
   changeYouTubeTag = false;
+  supportsPhpTag = false;
 }
 
 // MyBB
