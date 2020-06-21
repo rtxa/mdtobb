@@ -146,6 +146,7 @@ function defaultStyle() {
   $("#header2").value = "";
   $("#header3").value = "";
   $("#header4").value = "";
+  $("#useCodeTag").checked = true;
   $("#formatCodeSpan").checked = false;
   $("#addNewLineEndList").checked = false;
   $("#addNewLine").checked = false;
