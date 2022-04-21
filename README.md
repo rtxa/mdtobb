@@ -16,6 +16,8 @@ You can test this online right away [here](https://rtxa.github.io/mdtobb).
 - You can import your own styles configs and save them in your computer for latter use.
 - Works offline. Basically you can save the page and open it without downloading anything extra.
 
+Read the [wiki](https://github.com/rtxa/mdtobb/wiki) for more information about features, usages, tips, etc.
+
 ## How to use it
 
 1. Choose a style (vBulletin, phpBB, etc.).
@@ -23,6 +25,8 @@ You can test this online right away [here](https://rtxa.github.io/mdtobb).
 3. Results are displayed in the bottom text area.
 
 Now you are ready to copy it and paste it into your favourite forum.
+
+Checkout the folder [examples](https://github.com/rtxa/mdtobb/tree/main/examples) to try out the converter.
 
 ## Contribute
 
