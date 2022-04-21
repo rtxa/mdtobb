@@ -1,0 +1,40 @@
+button,
+.button-file-input {
+  font-family: inherit;
+  font-size: 13px;
+  color: inherit;
+  background-color: var(--ui-color-fg);
+  border: none;
+  margin: 0.5em;
+  padding: 1em;
+  transition-duration: 0.3s;
+  text-align: center;
+}
+
+button .material-icons,
+.button-file-input .material-icons {
+  vertical-align: middle;
+  transition-duration: 0.3s;
+}
+
+button:hover,
+.button-file-input:hover {
+  background-color: var(--ui-color-hover-bg);
+  color: var(--ui-color-hover-text);
+}
+
+button:hover .material-icons,
+.button-file-input:hover .material-icons {
+  color: var(--ui-color-hover-text);
+}
+
+button:active,
+.button-file-input:active {
+  background: var(--ui-color-active-bg);
+  color: var(--ui-color-active-text);
+}
+
+button:active .material-icons,
+.button-file-input:active .material-icons {
+  color: var(--ui-color-active-text);
+}

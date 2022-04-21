@@ -1,0 +1,33 @@
+input {
+  background-color: var(--ui-color-fg);
+  color: var(--ui-color-text-dimmed);
+  font-family: var(--code-font);
+  border: none;
+  margin: 0.5em;
+  padding: 1em;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+textarea {
+  width: 100%;
+  background-color: var(--ui-color-fg);
+  color: var(--ui-color-text-dimmed);
+  font-family: var(--code-font);
+  border: none;
+  height: 10em;
+  padding: 0.5em;
+  margin: 0.5em 0;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  resize: vertical;
+  min-height: 1.5em;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  background: var(--ui-color-focus-bg);
+}
+
+input[type="file"] {
+  display: none;
+}

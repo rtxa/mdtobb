@@ -1,0 +1,89 @@
+@import url("fonts.css");
+@import url("button.css");
+@import url("input.css");
+@import url("modal.css");
+
+/* Color palette */
+:root {
+  --color-black: #191919;
+  --color-gray: #232323;
+  --color-yellow-extra-opaque: #bea349;
+  --color-yellow-opaque: #dbb415;
+  --color-yellow: #ffcf0d;
+  --color-brown: #3b2f07;
+}
+
+/* UI */
+:root {
+  --ui-color-bg: var(--color-black);
+  --ui-color-fg: var(--color-gray);
+  --ui-color-text: var(--color-yellow);
+  --ui-color-text-dimmed: var(--color-yellow-opaque);
+  --ui-color-active-bg: var(--color-brown);
+  --ui-color-active-text: var(--color-yellow-opaque);
+  --ui-color-focus-bg: var(--color-brown);
+  --ui-color-hover-bg: var(--color-yellow);
+  --ui-color-hover-text: var(--color-black);
+  --ui-color-select-text: var(--color-yellow-extra-opaque);
+}
+
+/* Fonts */
+:root {
+  --general-font: "Overpass", "Courier New", "Courier", monospace;
+  --code-font: "Inconsolata", "Consolas", "Courier", monospace;
+}
+
+/* Reset CSS */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+/* Layout */
+
+body {
+  font-family: var(--general-font);
+  background-color: var(--ui-color-bg);
+  color: var(--ui-color-text);
+  text-align: center;
+}
+
+#app {
+  margin: 0 auto;
+  max-width: 75%;
+}
+
+@media only screen and (max-width: 480px) {
+  #app {
+    max-width: 90%;
+  }
+}
+
+footer {
+  margin-top: 0.5em;
+  padding-bottom: 1em;
+}
+
+/* Misc */
+
+.material-icons {
+  font-size: 18px;
+}
+
+a, a:before, a:after {
+  color: var(--ui-color-text-dimmed);
+}
+
+label {
+  user-select: none;
+  display: inline-block;
+}
+
+::selection {
+  color: var(--ui-color-fg);
+  background: var(--ui-color-select-text);
+}

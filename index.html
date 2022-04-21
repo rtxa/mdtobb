@@ -1,0 +1,93 @@
+<!doctype html>
+
+<!--
+  Markdown to BBCode
+  Author: rtxa
+  More info: https://www.github.com/rtxa/mdtobb
+-->
+
+<html lang="en">
+
+<head>
+  <title>Markdown to BBCode</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="images/mdtobb-logo.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/libs/vue.js"></script>
+  <script src="js/libs/marked.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <header>
+      <img src="images/mdtobb-logo.png" height="128px" width="128px">
+      <h1>Markdown to BBCode</h1>
+      <p>Convert Markdown text to BBCode to use in your forum posts</p>
+    </header>
+    <div class="container" id="styles-section">
+      <button v-on:click="showSettings = true">
+        <span class="material-icons">settings</span>
+      </button>
+    </div>
+    <modal v-model="showSettings">
+      
+      <h2>Converter</h2>
+      
+      <h3>General</h3>
+      <label><input v-model="style.smartyPants" type="checkbox">Typographic replacements</input></label>
+      
+      <h3>Add new line</h3>
+      <label><input v-model="style.addNewLineHeader" type="checkbox">Header</label>
+      <label><input v-model="style.addNewLineParagraph" type="checkbox">Paragraph</label>
+      <label><input v-model="style.addNewLineEndOfList" type="checkbox">List</label>
+      
+      <h2>Editor</h2>
+      <label><input v-model="options.saveInput" type="checkbox">Save input</label>
+      <label><input v-model="options.saveStyle" type="checkbox">Save style</label>
+      
+      <h2>Tags</h2>
+      <label>Header 1</label>
+      <input v-model="style.h1" type="text" placeholder="Header 1"></input>
+      <label>Header 2</label>
+      <input v-model="style.h2" type="text" placeholder="Header 2"></input>
+      <label>Header 3</label>
+      <input v-model="style.h3" type="text" placeholder="Header 3"></input>
+      <label>Header 4</label>
+      <input v-model="style.h4" type="text" placeholder="Header 4"></input>
+
+      <h2>Style</h2>
+
+      <label class="button-file-input" for="file-input">
+        <span class="material-icons">file_upload</span> Import config
+      </label>
+      <input type="file" id="file-input" v-on:change="onConfigImport"></input>
+
+      <button v-on:click="exportConfig">
+        <span class="material-icons">file_download</span> Export config
+      </button>
+    </modal>
+    <div class="container">
+      <textarea v-model="input" placeholder="Write your Markdown text here"></textarea>
+    </div>
+    <div class="container">
+      <textarea id="bbcode-output" v-model="convert" readonly="readonly"
+        placeholder="Result will appear here"></textarea>
+    </div>
+    <div class="container">
+      <button v-on:click="copyToClipboard()">
+        <span class="material-icons">content_copy</span> Copy to clipboard
+      </button>
+    </div>
+    <footer>
+      More info on <a href="https://www.github.com/rtxa/mdtobb">GitHub</a>
+    </footer>
+  </div>
+  <script src="js/components/modal.js"></script>
+  <script src="js/converter.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/styles.js"></script>
+  <script src="js/mdtobb.js"></script>
+</body>
+
+</html>
