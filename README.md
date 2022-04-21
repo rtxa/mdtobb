@@ -6,7 +6,7 @@ Convert Markdown text to BBCode in a fast and simple way.
 
 Allows you to customize the output of your Markdown text to multiple forums, simplifying the process of writing the same text across different sites.
 
-You can test this online right away [here](rtxa.github.io/mdtobb).
+You can test this online right away [here](https://rtxa.github.io/mdtobb).
 
 ## Features
 
