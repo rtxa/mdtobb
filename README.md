@@ -32,7 +32,14 @@ Checkout the folder [examples](https://github.com/rtxa/mdtobb/tree/main/examples
 
 Feel free to create any issues or pull requests, any feedback will be appreciated.
 
-## Thank to
+## Thanks to
 
 - [Marked](https://marked.js.org/) - Very nice library to convert Markdown to HTML and very customizable.
 - [MrHudson](https://codepen.io/MrHuds0n/pen/bgWdqe) - I liked the minimalist design of his converter and how it goes straight to the point.
+
+## Screenshoots
+### PC
+![](https://imgur.com/KoFZEYv.png)
+--------------------------
+### Mobile
+![](https://imgur.com/QrTvwXW.png)
